@@ -1,26 +1,23 @@
 $(document).ready(function() {
     // Sample participant list
-    var participants = ["Oskar", "Jero", "Tobi"];
+    var participants = ["Oskar", "Jero", "Tobi", "Tes1", "Tes2", "Tes3"];
     var drawn = []
 
     $("#drawButton").click(function() {
+        let name = $("#name").val();
 
-        var remainingParticipants = participants.slice(); // Create a copy of the participants array
-        let name = $("#name").text();
+        let index = null;
         for (var i = 0; i < participants.length; i++) {
-            var randomIndex = Math.floor(Math.random() * remainingParticipants.length);
-            var drawnParticipant = remainingParticipants[randomIndex];
-
-            // Ensure nobody draws themselves
-            if (drawnParticipant === participants[i]) {
-            remainingParticipants.splice(randomIndex, 1); // Remove the drawn person from the remaining list
-            randomIndex = Math.floor(Math.random() * remainingParticipants.length);
-            drawnParticipant = remainingParticipants[randomIndex];
+            console.log(participants[i] == name)
+            if(participants[i] == name){
+                index = i;
             }
         }
-      
-
-      $("#result").text(drawnParticipant)
+        if(index === null){
+            $("#result").text("Name in Liste nicht vorhanden")
+        }else{
+            $("#result").text(drawn[index])
+        }
 
     });
 
