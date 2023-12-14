@@ -27,11 +27,11 @@ $(document).ready(function() {
         let increment = 0;
 
         while(!found){
-            var rng = new Math.seedrandom(seedValue+increment);
             var remainingParticipants = participants.slice(); // Create a copy of the participants array
             found = true;
             drawn = [];
             for (var i = 0; i < participants.length; i++) {
+                var rng = new Math.seedrandom(seedValue+i+increment);
                 var drawnIndex = Math.floor(rng() * remainingParticipants.length);
                 var drawnParticipant = remainingParticipants[drawnIndex];
 
@@ -50,5 +50,5 @@ $(document).ready(function() {
       }
     
       // Example usage with a seed value "mySeed123"
-      drawParticipants(1);
+      drawParticipants(54634455546);
   });
