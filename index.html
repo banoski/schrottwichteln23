@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Schrottwichteln</title>
+  <!-- Füge hier deine CSS-Datei ein -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js">
+</script> 
+</head>
+<body>
+  <header>
+    <h1>Schrottwichteln</h1>
+    <!-- Hier könnte eine Beschreibung der Aktion stehen -->
+  </header>
+
+  <main>
+    <section id="registration">
+      <h2>Teilnehmerregistrierung</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- Weitere Formularfelder für E-Mail, Geschenkideen usw. -->
+
+        <button id="drawButton">Registrieren</button>
+    </section>
+
+
+    <section >
+      <h2>Ziehungsergebnisse</h2>
+      <span id="result"></span>
+      <!-- Hier werden die Ergebnisse der Ziehung angezeigt -->
+    </section>
+  </main>
+
+  <footer>
+    <!-- Hier könnten zusätzliche Informationen oder Links stehen -->
+    <p>&copy; 2023 Schrottwichteln</p>
+  </footer>
+
+  <!-- Füge hier dein JavaScript ein -->
+  <script src="script.js"></script>
+</body>
+</html>
